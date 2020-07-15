@@ -18,7 +18,7 @@ public class DashboardPage {
     private SelenideElement amount = $("[data-test-id='amount'] input");
     private SelenideElement fromCard = $("[data-test-id='from'] input");
     private SelenideElement transfer = $("[data-test-id='action-transfer']");
-    private SelenideElement cancelTransfer = $("[data-test-id='action-cancel']");
+    private SelenideElement errorTransfer = $("[data-test-id='error']");
 
     public void isDashboardPage() {
         head.shouldBe(Condition.visible);
@@ -74,12 +74,11 @@ public class DashboardPage {
     }
 
     public void invalidTransfer() {
-        transfer.click();
-        $("[data-test-id='error-notification']").shouldBe(Condition.visible);
+        errorTransfer.shouldBe(Condition.visible);
     }
 
-    public DashboardPage getCancelTransfer() {
+    /*public DashboardPage getCancelTransfer() {
         cancelTransfer.click();
         return new DashboardPage();
-    }
+    }*/
 }
