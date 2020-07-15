@@ -86,7 +86,7 @@ public class PaymentTest {
         dashboardPage.invalidTransfer();
     }
 
-    /*@Nested
+    @Nested
     public class negativeTest {
         @Test
         void shouldErrorIfAmountZero() {
@@ -136,5 +136,5 @@ public class PaymentTest {
             assertEquals(expected2, dashboardPage.getBalanceCard2());
             dashboardPage.invalidTransfer();
         }
-    }*/
+    }
 }
