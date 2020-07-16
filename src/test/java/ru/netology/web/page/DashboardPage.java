@@ -20,6 +20,10 @@ public class DashboardPage {
     private SelenideElement transfer = $("[data-test-id='action-transfer']");
     private SelenideElement errorTransfer = $("[data-test-id='error-notification']");
 
+    public void isDashboardPage() {
+        head.shouldBe(Condition.visible);
+    }
+
     public DashboardPage refillCard1() {
         card1.click();
         return new DashboardPage();
